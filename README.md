@@ -13,6 +13,7 @@
 + Gỡ lỗi - Bảng điều khiển Postman giúp kiểm tra dữ liệu nào đã được truy xuất giúp dễ dàng gỡ lỗi kiểm thử.
 + Tích hợp liên tục - Với khả năng hỗ trợ tích hợp liên tục, các hoạt động phát triển được duy trì.
 <img width="1600" height="1002" alt="image" src="https://github.com/user-attachments/assets/4aa5af01-0b31-4bd6-b3e2-5bda7e8ce5d4" />
+
 **Hình 1. Giao diện của Postman**
 
 ## Thực hành kiểm thử API với Postman
@@ -31,6 +32,7 @@ Sử dụng phương thức `GET` để gửi yêu cầu tìm kiếm thông tin 
  Kết quả: API trả về `200 OK` và thông tin của nghệ sĩ Coldplay dưới dạng JSON.
 
 <img width="1601" height="1000" alt="image" src="https://github.com/user-attachments/assets/1b094550-7505-44a7-bb1b-c0b728a4eeb1" />
+
 **Hình 2. Thực hiện GET Request tìm kiếm nghệ sĩ bằng Postman**
 
 ### GET Request – Tìm kiếm album
@@ -46,14 +48,32 @@ Sử dụng phương thức `GET` để tìm kiếm danh sách album của một
 
 Kết quả trả về là dữ liệu JSON chứa thông tin các album của nghệ sĩ Coldplay.
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2eb09ba7-7c2c-4ca8-b695-2da6373c8883" />
+
 **Hình 3. Thực hiện GET Request tìm kiếm Album bằng Postman**
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9e2f80ea-ea28-49d3-a592-6d6fd52eb858" />
+
 **Hình 4. Thực hiện GET Request tìm kiếm Track bằng Postman**
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b576bd8-1123-45d1-9af9-80f0f9a1f341" />
+
 **Hình 5. Thực hiện GET Request tìm kiếm Track bằng Postman**
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4ce113ba-9deb-4b4d-b042-d9b89cc35ef7" />
+
 **Hình 6. Thực hiện Post Request create post bằng Postman**
 
+<img width="966" height="1027" alt="image" src="https://github.com/user-attachments/assets/803e94b0-471c-4281-a1cc-413d01c4090f" />
+
+**Hình 7. Thực hiện Put Request update post bằng Postman**
+
+<img width="966" height="1038" alt="image" src="https://github.com/user-attachments/assets/0a22ae0a-f5db-4fb1-a806-47b75d690686" />
+
+**Hình 8. Thực hiện Patch Request update post bằng Postman**
+
+<img width="967" height="1021" alt="image" src="https://github.com/user-attachments/assets/f2c321eb-0c16-4d9f-98aa-e5f3c0077f94" />
+**Hình 9. Thực hiện Delete Request bằng Postman**
+
+<img width="967" height="1027" alt="image" src="https://github.com/user-attachments/assets/7c741081-17a0-4a86-b444-0aae9c736687" />
+
+**Hình 10. Thực hiện Test Script bằng Postman**
