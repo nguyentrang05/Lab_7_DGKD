@@ -1,8 +1,8 @@
 # Thực hành Postman
 ## Giới thiệu về Postman
-- Postman hiện là một trong những công cụ phổ biến nhất được sử dụng trong kiểm thử API. Nó bắt đầu vào năm 2012 như một dự án phụ của Abhinav Asthana để đơn giản hóa quy trình làm việc API trong kiểm thử và phát triển. API là viết tắt của giao diện lập trình ứng dụng cho phép các ứng dụng phần mềm giao tiếp với nhau thông qua các lệnh gọi API.
+Postman hiện là một trong những công cụ phổ biến nhất được sử dụng trong kiểm thử API. Nó bắt đầu vào năm 2012 như một dự án phụ của Abhinav Asthana để đơn giản hóa quy trình làm việc API trong kiểm thử và phát triển. API là viết tắt của giao diện lập trình ứng dụng cho phép các ứng dụng phần mềm giao tiếp với nhau thông qua các lệnh gọi API.
 
-- Với hơn 4 triệu người dùng hiện nay, Postman đã trở thành một công cụ được lựa chọn vì những lý do sau:
+Với hơn 4 triệu người dùng hiện nay, Postman đã trở thành một công cụ được lựa chọn vì những lý do sau:
 
 + Khả năng truy cập - Để sử dụng Postman, người ta chỉ cần đăng nhập vào tài khoản của chính họ để dễ dàng truy cập các tệp mọi lúc, mọi nơi miễn là ứng dụng Postman được cài đặt trên máy tính.
 + Sử dụng Collection - Postman cho phép người dùng tạo collection cho các lệnh gọi API của họ. Mỗi collection có thể tạo các thư mục con và nhiều yêu cầu. Điều này giúp tổ chức lại các bộ kiểm thử của bạn.
@@ -167,7 +167,9 @@ Sử dụng phương thức `DELETE` để gửi yêu cầu xóa một bài vi�
 DELETE Request không yêu cầu Request Body trong trường hợp này. API trả về `200 OK`, cho biết yêu cầu đã được xử lý thành công.
 
 <img width="967" height="1021" alt="image" src="https://github.com/user-attachments/assets/f2c321eb-0c16-4d9f-98aa-e5f3c0077f94" />
+
 **Hình 9. Thực hiện Delete Request bằng Postman**
+
 ### Test Script – Kiểm thử tự động Response
 
 Postman cho phép sử dụng Test Script để tự động kiểm tra kết quả trả về từ API.
