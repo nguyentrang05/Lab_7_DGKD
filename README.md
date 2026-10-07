@@ -50,30 +50,139 @@ Kết quả trả về là dữ liệu JSON chứa thông tin các album của n
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2eb09ba7-7c2c-4ca8-b695-2da6373c8883" />
 
 **Hình 3. Thực hiện GET Request tìm kiếm Album bằng Postman**
+### GET Request – Tìm kiếm bài hát
+
+Sử dụng phương thức `GET` để tìm kiếm thông tin bài hát thông qua API của TheAudioDB.
+
+| Thành phần | Giá trị |
+|---|---|
+| Method | `GET` |
+| Endpoint | `/api/v1/json/123/searchtrack.php` |
+| Query Parameter | `s=coldplay`, `t=yellow` |
+| Status Code | `200 OK` |
+
+Trong đó, `s` là tên nghệ sĩ và `t` là tên bài hát. API trả về thông tin của bài hát "Yellow" thuộc nghệ sĩ Coldplay dưới dạng JSON.
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9e2f80ea-ea28-49d3-a592-6d6fd52eb858" />
 
 **Hình 4. Thực hiện GET Request tìm kiếm Track bằng Postman**
+### GET Request – Sử dụng HTTP Header
+
+Thực hiện GET Request kết hợp với HTTP Header để chỉ định định dạng dữ liệu mà client mong muốn nhận từ API.
+
+| Thành phần | Giá trị |
+|---|---|
+| Method | `GET` |
+| Endpoint | `/api/v1/json/123/search.php` |
+| Query Parameter | `s=coldplay` |
+| Header | `Accept: application/json` |
+| Status Code | `200 OK` |
+
+Header `Accept: application/json` cho biết client mong muốn server trả về dữ liệu dưới dạng JSON.
+
+Kết quả trả về là thông tin của nghệ sĩ Coldplay dưới dạng JSON.
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b576bd8-1123-45d1-9af9-80f0f9a1f341" />
 
-**Hình 5. Thực hiện GET Request tìm kiếm Track bằng Postman**
+**Hình 5. Thực hiện GET Request với Header bằng Postman**
+### POST Request – Tạo dữ liệu
 
+Sử dụng phương thức `POST` để gửi dữ liệu lên API và mô phỏng việc tạo một bài viết mới.
+
+| Thành phần | Giá trị |
+|---|---|
+| Method | `POST` |
+| Endpoint | `https://jsonplaceholder.typicode.com/posts` |
+| Request Body | JSON |
+| Status Code | `201 Created` |
+
+Dữ liệu được gửi trong Request Body:
+
+```json
+{
+    "title": "Postman Testing",
+    "body": "This is a test post.",
+    "userId": 1
+}
+```
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4ce113ba-9deb-4b4d-b042-d9b89cc35ef7" />
 
 **Hình 6. Thực hiện Post Request create post bằng Postman**
+### PUT Request – Cập nhật dữ liệu
 
+Sử dụng phương thức `PUT` để cập nhật toàn bộ thông tin của một bài viết.
+
+| Thành phần | Giá trị |
+|---|---|
+| Method | `PUT` |
+| Endpoint | `https://jsonplaceholder.typicode.com/posts/1` |
+| Request Body | JSON |
+| Status Code | `200 OK` |
+
+Dữ liệu được gửi trong Request Body:
+
+```json
+{
+    "id": 1,
+    "title": "Postman Testing Updated",
+    "body": "This post has been updated using PUT.",
+    "userId": 1
+}
+```
 <img width="966" height="1027" alt="image" src="https://github.com/user-attachments/assets/803e94b0-471c-4281-a1cc-413d01c4090f" />
 
 **Hình 7. Thực hiện Put Request update post bằng Postman**
+### PATCH Request – Cập nhật một phần dữ liệu
 
+Sử dụng phương thức `PATCH` để cập nhật một phần thông tin của bài viết.
+
+| Thành phần | Giá trị |
+|---|---|
+| Method | `PATCH` |
+| Endpoint | `https://jsonplaceholder.typicode.com/posts/1` |
+| Request Body | JSON |
+| Status Code | `200 OK` |
+
+Trong request này, chỉ trường `title` được cập nhật:
+
+```json
+{
+    "title": "Postman Testing with PATCH"
+}
+```
 <img width="966" height="1038" alt="image" src="https://github.com/user-attachments/assets/0a22ae0a-f5db-4fb1-a806-47b75d690686" />
 
 **Hình 8. Thực hiện Patch Request update post bằng Postman**
+### DELETE Request – Xóa dữ liệu
+
+Sử dụng phương thức `DELETE` để gửi yêu cầu xóa một bài viết.
+
+| Thành phần | Giá trị |
+|---|---|
+| Method | `DELETE` |
+| Endpoint | `https://jsonplaceholder.typicode.com/posts/1` |
+| Status Code | `200 OK` |
+| Request Body | Không có |
+
+DELETE Request không yêu cầu Request Body trong trường hợp này. API trả về `200 OK`, cho biết yêu cầu đã được xử lý thành công.
 
 <img width="967" height="1021" alt="image" src="https://github.com/user-attachments/assets/f2c321eb-0c16-4d9f-98aa-e5f3c0077f94" />
 **Hình 9. Thực hiện Delete Request bằng Postman**
+### Test Script – Kiểm thử tự động Response
 
+Postman cho phép sử dụng Test Script để tự động kiểm tra kết quả trả về từ API.
+
+Trong bài thực hành, thực hiện kiểm tra HTTP Status Code:
+
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("Response contains artists", function () {
+    const jsonData = pm.response.json();
+    pm.expect(jsonData.artists).to.not.be.empty;
+});
+```
 <img width="967" height="1027" alt="image" src="https://github.com/user-attachments/assets/7c741081-17a0-4a86-b444-0aae9c736687" />
 
 **Hình 10. Thực hiện Test Script bằng Postman**
